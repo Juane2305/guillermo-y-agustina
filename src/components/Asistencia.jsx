@@ -33,6 +33,12 @@ const Asistencia = ({ clase, claseButton, claseTitle, linkAsistencia }) => {
               className="text-white text-md text-center mt-3"
               data-aos="fade-up"
             >
+              Evento solo para adultos
+            </p>
+            <p
+              className="text-white text-md text-center mt-3"
+              data-aos="fade-up"
+            >
               Por favor confirmar antes del 10 de octubre
             </p>
           </div>
