@@ -1,0 +1,33 @@
+import React from 'react'
+import instagram from '../assets/praga/instagram.json'
+import Lottie from 'react-lottie-player';
+
+const InstagramWall = ({userClass, textClass, user}) => {
+
+  const instagramUser = user.replace(/^@/, "");
+
+
+  return (
+    <div className='py-24'>
+      <div style={{  height: 120 }} className='w-full flex flex-col items-center justify-center'>
+              <Lottie
+                loop
+                play
+                animationData={instagram}
+                style={{ width: "100%", height: "100%" }}
+              />
+            </div>            
+            <div className='flex flex-col gap-y-5 items-center text-center'>
+              <a href={`https://www.instagram.com/${instagramUser}/`} target='_blank' className='flex flex-col items-center justify-center'>
+                    <p className={`text-3xl font-light ${userClass}`}>{user}</p>
+              </a>
+              <a href={`https://www.instagram.com/nicoogaray21/`} target='_blank' className='flex flex-col items-center justify-center'>
+                    <p className={`text-3xl font-light ${userClass}`}>@nicoogaray21</p>
+              </a>
+                    <p className={`mx-10 font-thin text-lg ${textClass}`}>Seguinos en nuestras cuentas de instagram para ver las novedades y etiquetarnos en tus fotos</p>
+            </div>
+    </div>
+  )
+}
+
+export default InstagramWall
